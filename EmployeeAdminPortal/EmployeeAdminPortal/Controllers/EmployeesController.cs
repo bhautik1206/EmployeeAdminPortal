@@ -1,6 +1,7 @@
-﻿using EmployeeAdminPortal.Data;
+using EmployeeAdminPortal.Data;
 using EmployeeAdminPortal.Models;
 using EmployeeAdminPortal.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,6 +36,7 @@ namespace EmployeeAdminPortal.Controllers
             return Ok(employee);
         }
         [HttpPost]
+        [Authorize]
         public IActionResult AddEmployee(AddEmployeeDto addEmployeeDto )
         {
             var employeeEntity = new Employee()
@@ -42,7 +44,6 @@ namespace EmployeeAdminPortal.Controllers
                 Name = addEmployeeDto.Name,
                 Email = addEmployeeDto.Email,
                 Phone = addEmployeeDto.Phone,
-                Salary = addEmployeeDto.Salary,
             };
 
             dbContext.Employees.Add(employeeEntity);
@@ -51,6 +52,7 @@ namespace EmployeeAdminPortal.Controllers
         }
         [HttpPut]
         [Route("{id:guid}")]
+        [Authorize]
         public IActionResult UpdateEmployee(Guid id , UpdateEmployeeDto updatemployeeDto)
         {
             var updatedEmploye = dbContext.Employees.Find(id);
@@ -60,7 +62,6 @@ namespace EmployeeAdminPortal.Controllers
             }
             updatedEmploye.Name = updatemployeeDto.Name;
             updatedEmploye.Email = updatemployeeDto.Email;
-            updatedEmploye.Salary = updatemployeeDto.Salary;
             updatedEmploye.Phone= updatemployeeDto.Phone;
 
             dbContext.SaveChanges();
@@ -68,6 +69,7 @@ namespace EmployeeAdminPortal.Controllers
         }
         [HttpDelete]
         [Route("{id:guid}")]
+        [Authorize]
         public IActionResult DeleteEmployee(Guid id)
         {
             var deleteEmployee = dbContext.Employees.Find(id);

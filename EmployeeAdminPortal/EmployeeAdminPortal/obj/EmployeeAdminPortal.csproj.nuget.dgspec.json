@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\My PC\\source\\repos\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj": {}
+    "B:\\.net practice\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\My PC\\source\\repos\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj": {
+    "B:\\.net practice\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\My PC\\source\\repos\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj",
+        "projectUniqueName": "B:\\.net practice\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj",
         "projectName": "EmployeeAdminPortal",
-        "projectPath": "C:\\Users\\My PC\\source\\repos\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj",
+        "projectPath": "B:\\.net practice\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal.csproj",
         "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\My PC\\source\\repos\\EmployeeAdminPortal\\EmployeeAdminPortal\\obj\\",
+        "outputPath": "B:\\.net practice\\EmployeeAdminPortal\\EmployeeAdminPortal\\EmployeeAdminPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -96,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
